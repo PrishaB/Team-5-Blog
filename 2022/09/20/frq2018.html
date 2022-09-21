@@ -163,8 +163,8 @@ window.onload = wrap_img;
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Part-A">Part A<a class="anchor-link" href="#Part-A"> </a></h3><p>The distance away from the goal is defined as dist while the number of jumps given is defined as numHops so if we call the method FrogSimulation using FrogSimulation sim= new FrogSimulation(24,5);. The simulation would have a goal at a distance of 24 inches and a maximum amount of 5 jumps. If the frog makes it to or past the goal sim.simulate will return true and if it is negative or has just not made it to the goal but is not a negative value then it will return false</p>
-<h4 id="Requirements">Requirements<a class="anchor-link" href="#Requirements"> </a></h4><ul>
+<h2 id="Part-A">Part A<a class="anchor-link" href="#Part-A"> </a></h2><p>The distance away from the goal is defined as dist while the number of jumps given is defined as numHops so if we call the method FrogSimulation using FrogSimulation sim= new FrogSimulation(24,5);. The simulation would have a goal at a distance of 24 inches and a maximum amount of 5 jumps. If the frog makes it to or past the goal sim.simulate will return true and if it is negative or has just not made it to the goal but is not a negative value then it will return false</p>
+<h3 id="Requirements">Requirements<a class="anchor-link" href="#Requirements"> </a></h3><ul>
 <li>Complete method simulate.</li>
 <li>Requirement: must use hopDistance</li>
 <li>Return true if frog successfully reaches or goes past the goal </li>
@@ -175,7 +175,7 @@ window.onload = wrap_img;
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Solution">Solution<a class="anchor-link" href="#Solution"> </a></h4><p>First we define location to be at zero, our starting point. Then we use a for loop so that i will continue to increase until it reaches the max number of hops and so that for as long as this happens, the frog will hop (ie. location= location+hopDistance, which means that the distance the frog jumps will be added to location every time the frog jumps in order to have the final location of the frog). After the frog has finished jumping, we used an if loop so that if the frog is at or beyond the goal then it will be true and if it is at a negative value or behind the starting value then it will return false. If the frog has used up all its jumps but has not made it to the goal or at a negative value then it will return false regardless which is done by a return false outside of the for loop.</p>
+<h3 id="Solution">Solution<a class="anchor-link" href="#Solution"> </a></h3><p>First we define location to be at zero, our starting point. Then we use a for loop so that i will continue to increase until it reaches the max number of hops and so that for as long as this happens, the frog will hop (ie. location= location+hopDistance, which means that the distance the frog jumps will be added to location every time the frog jumps in order to have the final location of the frog). After the frog has finished jumping, we used an if loop so that if the frog is at or beyond the goal then it will be true and if it is at a negative value or behind the starting value then it will return false. If the frog has used up all its jumps but has not made it to the goal or at a negative value then it will return false regardless which is done by a return false outside of the for loop.</p>
 
 </div>
 </div>
@@ -210,8 +210,8 @@ window.onload = wrap_img;
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Part-B">Part B<a class="anchor-link" href="#Part-B"> </a></h3><p>We can then use the values given by the method simulate in order to finish the simulation of the frog. Prompt B is asking for us to finish the simulation and declare whether or not the frog has won the game ie made it to the goal, which we can find using the boolean values given by simulate, and then find the proportion of wins overall after a certain number of runs.</p>
-<h4 id="Requirements">Requirements<a class="anchor-link" href="#Requirements"> </a></h4><ul>
+<h2 id="Part-B">Part B<a class="anchor-link" href="#Part-B"> </a></h2><p>We can then use the values given by the method simulate in order to finish the simulation of the frog. Prompt B is asking for us to finish the simulation and declare whether or not the frog has won the game ie made it to the goal, which we can find using the boolean values given by simulate, and then find the proportion of wins overall after a certain number of runs.</p>
+<h3 id="Requirements">Requirements<a class="anchor-link" href="#Requirements"> </a></h3><ul>
 <li>Complete runSimulations method to do a certain amount of runs and then output the proportion of simulations where the frog reaches the goal </li>
 </ul>
 
@@ -220,7 +220,7 @@ window.onload = wrap_img;
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Solution">Solution<a class="anchor-link" href="#Solution"> </a></h4><p>This is a method called runSimulations and basically if we call this method such as FrogSimulation run = new FrogSimulation(23); it should run the simulation 23 times and count the number of successes- which will eventually be changed into a decimal of successes/tries. We do this by setting the number of successes to zero to begin with and then we use a for loop, with basically the same idea as part a, so that the code will run for as many times as directed. Then inside of that for loop, we have an if loop so that for as long as simulate runs true then the success counter will increase and the proportion of successes/tries will be returned</p>
+<h3 id="Solution">Solution<a class="anchor-link" href="#Solution"> </a></h3><p>This is a method called runSimulations and basically if we call this method such as FrogSimulation run = new FrogSimulation(23); it should run the simulation 23 times and count the number of successes- which will eventually be changed into a decimal of successes/tries. We do this by setting the number of successes to zero to begin with and then we use a for loop, with basically the same idea as part a, so that the code will run for as many times as directed. Then inside of that for loop, we have an if loop so that for as long as simulate runs true then the success counter will increase and the proportion of successes/tries will be returned</p>
 
 </div>
 </div>
