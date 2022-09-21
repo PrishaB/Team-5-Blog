@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "Title",
-            "content": "public class FrogSimulation { private int goalDistance; private int maxHops; public FrogSimulation(int dist, int numHops){ goalDistance=dist; maxHops=numHops; } private int hopDistance(){ } public boolean simulate(){} public double runSimulations(int num){} } .",
+            "content": "public class FrogSimulation { private int goalDistance; private int maxHops; public FrogSimulation(int dist, int numHops){ goalDistance=dist; maxHops=numHops; } private int hopDistance(){ for(int i=0; i&lt;numHops; i++ ){ } } public boolean simulate(){} public double runSimulations(int num){} } .",
             "url": "https://prishab.github.io/Team-5-Blog/2022/09/20/frq2018.html",
             "relUrl": "/2022/09/20/frq2018.html",
             "date": " • Sep 20, 2022"
