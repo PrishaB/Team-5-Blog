@@ -106,9 +106,6 @@
   
 
   
-  
-
-  
 
   
   
@@ -119,13 +116,18 @@
   
 
   
+
+  
+  
+
+  
   
 
   
   
 
   
-      ,"page10": {
+      ,"page11": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://prishab.github.io/Team-5-Blog/robots.txt",
