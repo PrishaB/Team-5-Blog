@@ -121,8 +121,13 @@
   }
  ],
  "metadata": {
+  "kernelspec": {
+   "display_name": "Java",
+   "language": "java",
+   "name": "java"
+  },
   "language_info": {
-   "name": "python"
+   "name": "java"
   },
   "orig_nbformat": 4
  },
