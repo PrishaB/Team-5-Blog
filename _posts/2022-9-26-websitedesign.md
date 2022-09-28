@@ -15,6 +15,7 @@ Our project plan hopes to include the following: chatting, social networking, an
 ![{{ site.baseurl }} https://github.com/PrishaB/Team-5-Blog/blob/babfae22cc266f4ed674c71e1fe4d1d1b8d1d1ce/_notebooks/ghtop_images/Screen%20Shot%202022-09-26%20at%207.30.59%20PM.png]()
 As seen, we have a cover page with a navbar showing 6 buttons which will essentially be our about us, Chats, Tips/Resources, and login/sign up. All of these buttons lead us to different screens with the corresponding information. 
 Our About page talks about our mission statement for the site as well as a brief description of the team members and their roles. Additionally, we also plan to ask the Ap Psych teacher to sponsor us so we've left a space for sponsor information
+<a href="{{site.baseurl}}/techtalk/spring_thymeleaf">Spring Thymeleaf - Frontend</a>
 
 ![ghtop_images/Screen Shot 2022-09-26 at 7.31.05 PM.png]()
 ![_notebooks/ghtop_images/Screen Shot 2022-09-26 at 7.31.20 PM.png]()
