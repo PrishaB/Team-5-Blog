@@ -17,14 +17,20 @@ Our project plan hopes to include the following: chatting, social networking, an
 
 As seen, we have a cover page with a navbar showing 6 buttons which will essentially be our about us, Chats, Tips/Resources, and login/sign up. All of these buttons lead us to different screens with the corresponding information. 
 Our About page talks about our mission statement for the site as well as a brief description of the team members and their roles. Additionally, we also plan to ask the Ap Psych teacher to sponsor us so we've left a space for sponsor information
+
 <img width="515" alt="Screen Shot 2022-09-26 at 7 31 05 PM" src="https://user-images.githubusercontent.com/111522883/192814567-f1503514-8cf0-4a0c-8c81-fd1830cfee6e.png">
+
 <img width="514" alt="Screen Shot 2022-09-26 at 7 31 20 PM" src="https://user-images.githubusercontent.com/111522883/192814563-db8cd310-2d29-4e8e-bf62-a7c01d66d6c3.png">
+
 <img width="516" alt="Screen Shot 2022-09-26 at 7 31 30 PM" src="https://user-images.githubusercontent.com/111522883/192814554-8588347a-6b25-41bd-8b17-e52d9f00f599.png">
+
 Chats page provides a chat room of sorts for the users to interact with. We are thinking of potentially adding a school wide chat room so that any student from DNHS can access it and talk on it as long as they have an account. One of the things we were thinking of implementing would be to add a more personal account so when you sign up you would be able to jot down any preferences you have and this can help you match up with other like-minded folks which would be a great way to help meet new people and make new friends.
+
 <img width="520" alt="Screen Shot 2022-09-26 at 7 31 38 PM" src="https://user-images.githubusercontent.com/111522883/192814667-900bd4d5-7c52-44c1-b349-d9822f77737d.png">
 
 
 The Tips/Resources section provides links/numbers to hotlines for various mental health purposes as well as several mental health websites/resources that can be helpful such as advice columns.
+
 <img width="514" alt="Screen Shot 2022-09-26 at 7 31 44 PM" src="https://user-images.githubusercontent.com/111522883/192814691-112390a1-5f41-41b7-8df0-3975e9343a39.png">
 
 
