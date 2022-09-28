@@ -1,0 +1,66 @@
+---
+layout: default
+permalink: /friends/
+title: friends
+search_exclude: true
+---
+
+<html>
+<head>
+<title>Health.ly</title>
+<style>
+    .button {
+      border: none;
+      padding: 20px 40px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      background-color:aquamarine;
+    }
+</style>
+</head>
+<script>
+    function addRow(){
+        var name =document.getElementById('name').value;
+        var likes =document.getElementById('likes').value;
+        var dislikes =document.getElementById('dislikes').value;
+        var age =document.getElementById('age').value;
+        var special =document.getElementById('special').value;
+        var table = document.getElementsByTagName('table')[0];
+        var newRow = table.insertRow(table.rows.length/2+1);
+        var cel1 = newRow.insertCell(0);
+        var cel2 = newRow.insertCell(1);
+        var cel3  = newRow.insertCell(2);
+        var cel4 = newRow.insertCell(3);
+        var cel5 = newRow.insertCell(4);
+
+        cel1.innerHTML=name;
+        cel2.innerHTML=likes;
+        cel3.innerHTML=dislikes;
+        cel4.innerHTML=age;
+        cel5.innerHTML=special;
+    }
+    </script>
+<body>
+    <h1>Make new friends!</h1>
+    name: <input type="text" name="name" id="name"/><br></br>
+    likes: <input type="text" likes="likes" id="likes"/><br></br>
+    dislikes: <input type="text" name="dislikes" id="dislikes"/><br></br>
+    age: <input type="text" name="age" id="age"/><br></br>
+    Something special: <input type="text" name="special" id="special"/><br></br>
+<button onclick="addRow();">Click to add friends</button><br></br>
+<table>
+    <tr>
+        <th>Friend Name</th>
+        <th>Likes</th>
+        <th>dislikes</th>
+        <th>Age</th>
+        <th>Something Special</th>
+    </tr>
+    </table>
+
+</body>
+</html>
