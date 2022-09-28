@@ -324,24 +324,24 @@ fibonacci Sequence 20 = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377,
 	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> 
 	<span class="p">{</span>
 		<span class="c1">// Set it to the number of elements you want in the Fibonacci Series</span>
-		 <span class="kt">int</span> <span class="n">maxNumber</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span> 
-		 <span class="kt">int</span> <span class="n">previousNumber</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-		 <span class="kt">int</span> <span class="n">nextNumber</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+		 <span class="kt">int</span> <span class="n">tries</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span> 
+		 <span class="kt">int</span> <span class="n">num1</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+		 <span class="kt">int</span> <span class="n">num2</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 		 
-	        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"Fibonacci Series of "</span><span class="o">+</span><span class="n">maxNumber</span><span class="o">+</span><span class="s">" numbers:"</span><span class="p">);</span>
+	        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"Fibonacci Series: "</span><span class="p">);</span>
  
-	        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">maxNumber</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>  <span class="c1">//looping through the numbers until i &lt;= to 10</span>
+	        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">tries</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>  <span class="c1">//looping through the numbers until i &lt;= to 10</span>
 	        <span class="p">{</span>
-	            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">previousNumber</span><span class="o">+</span><span class="s">" "</span><span class="p">);</span>
+	            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">num1</span><span class="o">+</span><span class="s">" "</span><span class="p">);</span>
 	            <span class="cm">/* On each iteration, we are assigning second number</span>
 <span class="cm">	             * to the first number and assigning the sum of last two</span>
 <span class="cm">	             * numbers to the second number</span>
 <span class="cm">	             */</span>
  
 	      
-	            <span class="kt">int</span> <span class="n">sum</span> <span class="o">=</span> <span class="n">previousNumber</span> <span class="o">+</span> <span class="n">nextNumber</span><span class="p">;</span> <span class="c1">//Actual Fibo program, adding last and first number together</span>
-	            <span class="n">previousNumber</span> <span class="o">=</span> <span class="n">nextNumber</span><span class="p">;</span>
-	            <span class="n">nextNumber</span> <span class="o">=</span> <span class="n">sum</span><span class="p">;</span>
+	            <span class="kt">int</span> <span class="n">total</span> <span class="o">=</span> <span class="n">num1</span> <span class="o">+</span> <span class="n">num2</span><span class="p">;</span> <span class="c1">//Actual Fibo program, adding last and first number together</span>
+	            <span class="n">num1</span> <span class="o">=</span> <span class="n">num2</span><span class="p">;</span>
+	            <span class="n">num2</span> <span class="o">=</span> <span class="n">total</span><span class="p">;</span>
 	        <span class="p">}</span>
 				<span class="n">Fibo</span> <span class="n">fib</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FibonacciFor</span><span class="p">();</span> <span class="c1">//Printing code from initial fibo </span>
 				<span class="n">fib</span><span class="p">.</span><span class="na">print</span><span class="p">();</span>
@@ -362,7 +362,7 @@ fibonacci Sequence 20 = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377,
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Fibonacci Series of 10 numbers:0 1 1 2 3 5 8 13 21 34 Init method = Stream
+<pre>Fibonacci Series: 0 1 1 2 3 5 8 13 21 34 Init method = Stream
 fibonacci Number 20 = 4181
 fibonacci List = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181]
 fibonacci Hashmap = {0=[0], 1=[0, 1], 2=[0, 1, 1], 3=[0, 1, 1, 2], 4=[0, 1, 1, 2, 3], 5=[0, 1, 1, 2, 3, 5], 6=[0, 1, 1, 2, 3, 5, 8], 7=[0, 1, 1, 2, 3, 5, 8, 13], 8=[0, 1, 1, 2, 3, 5, 8, 13, 21], 9=[0, 1, 1, 2, 3, 5, 8, 13, 21, 34], 10=[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55], 11=[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89], 12=[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144], 13=[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233], 14=[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377], 15=[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610], 16=[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987], 17=[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597], 18=[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584], 19=[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181]}
@@ -418,16 +418,18 @@ fibonacci Sequence 20 = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377,
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">FibonacciWhile</span> <span class="kd">extends</span> <span class="n">Fibo</span> <span class="p">{</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> 
 	<span class="p">{</span>
-		 <span class="kt">int</span> <span class="n">maxNumber</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">previousNumber</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">nextNumber</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-	        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"Fibonacci Series of "</span><span class="o">+</span><span class="n">maxNumber</span><span class="o">+</span><span class="s">" numbers:"</span><span class="p">);</span> <span class="c1">//Initial line, basically saying number of numbers</span>
+		 <span class="kt">int</span> <span class="n">tries</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+		 <span class="kt">int</span> <span class="n">num1</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+		 <span class="kt">int</span> <span class="n">num2</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+	        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"Fibonacci Series: "</span><span class="p">);</span> <span class="c1">//Initial line, basically saying number of numbers</span>
  
 	        <span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
-	        <span class="k">while</span><span class="p">(</span><span class="n">i</span> <span class="o">&lt;=</span> <span class="n">maxNumber</span><span class="p">)</span>
+	        <span class="k">while</span><span class="p">(</span><span class="n">i</span> <span class="o">&lt;=</span> <span class="n">tries</span><span class="p">)</span>
 	        <span class="p">{</span>
-	            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">previousNumber</span><span class="o">+</span><span class="s">" "</span><span class="p">);</span>
-	            <span class="kt">int</span> <span class="n">sum</span> <span class="o">=</span> <span class="n">previousNumber</span> <span class="o">+</span> <span class="n">nextNumber</span><span class="p">;</span>
-	            <span class="n">previousNumber</span> <span class="o">=</span> <span class="n">nextNumber</span><span class="p">;</span>
-	            <span class="n">nextNumber</span> <span class="o">=</span> <span class="n">sum</span><span class="p">;</span>
+	            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">num1</span><span class="o">+</span><span class="s">" "</span><span class="p">);</span>
+	            <span class="kt">int</span> <span class="n">total</span> <span class="o">=</span> <span class="n">num1</span> <span class="o">+</span> <span class="n">num2</span><span class="p">;</span>
+	            <span class="n">num1</span> <span class="o">=</span> <span class="n">num2</span><span class="p">;</span>
+	            <span class="n">num2</span> <span class="o">=</span> <span class="n">total</span><span class="p">;</span>
 	            <span class="n">i</span><span class="o">++</span><span class="p">;</span>
 	        <span class="p">}</span>
 			<span class="n">Fibo</span> <span class="n">fib</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FibonacciWhile</span><span class="p">();</span>
@@ -447,7 +449,7 @@ fibonacci Sequence 20 = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377,
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Fibonacci Series of 10 numbers:0 1 1 2 3 5 8 13 21 34 Init method = Stream
+<pre>Fibonacci Series: 0 1 1 2 3 5 8 13 21 34 Init method = Stream
 fibonacci Number 20 = 4181
 fibonacci List = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181]
 fibonacci Hashmap = {0=[0], 1=[0, 1], 2=[0, 1, 1], 3=[0, 1, 1, 2], 4=[0, 1, 1, 2, 3], 5=[0, 1, 1, 2, 3, 5], 6=[0, 1, 1, 2, 3, 5, 8], 7=[0, 1, 1, 2, 3, 5, 8, 13], 8=[0, 1, 1, 2, 3, 5, 8, 13, 21], 9=[0, 1, 1, 2, 3, 5, 8, 13, 21, 34], 10=[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55], 11=[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89], 12=[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144], 13=[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233], 14=[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377], 15=[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610], 16=[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987], 17=[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597], 18=[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584], 19=[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181]}
@@ -501,19 +503,22 @@ fibonacci Sequence 20 = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377,
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="c1">//Using Recursion</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">FibonacciRecursion</span> <span class="kd">extends</span> <span class="n">Fibo</span> <span class="p">{</span>
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">fibonacciRecursion</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">){</span>
-        <span class="k">if</span><span class="p">(</span><span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">){</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">fibonacciRecursion</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">){</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">a</span> <span class="o">==</span> <span class="mi">0</span><span class="p">){</span>
             <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
         <span class="p">}</span>
-        <span class="k">if</span><span class="p">(</span><span class="n">n</span> <span class="o">==</span> <span class="mi">1</span> <span class="o">||</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">2</span><span class="p">){</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">a</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">){</span>
                 <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
             <span class="p">}</span>
-        <span class="k">return</span> <span class="n">fibonacciRecursion</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="n">fibonacciRecursion</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+        <span class="k">if</span><span class="p">(</span> <span class="n">a</span> <span class="o">==</span> <span class="mi">2</span><span class="p">){</span>
+            <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">fibonacciRecursion</span><span class="p">(</span><span class="n">a</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="n">fibonacciRecursion</span><span class="p">(</span><span class="n">a</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
         <span class="p">}</span>
         <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span> <span class="n">args</span><span class="o">[]</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kt">int</span> <span class="n">maxNumber</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"Fibonacci Series of "</span><span class="o">+</span><span class="n">maxNumber</span><span class="o">+</span><span class="s">" numbers: "</span><span class="p">);</span>
-        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">maxNumber</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+        <span class="kt">int</span> <span class="n">tries</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"Fibonacci Series of "</span><span class="o">+</span><span class="n">tries</span><span class="o">+</span><span class="s">" numbers: "</span><span class="p">);</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">tries</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
                 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">fibonacciRecursion</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span><span class="s">" "</span><span class="p">);</span>
             <span class="p">}</span>
         
