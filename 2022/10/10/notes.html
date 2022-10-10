@@ -65,7 +65,7 @@ window.onload = wrap_img;
           </span>
         </label>
 
-        <div class="trigger"><a class="page-link" href="/Team-5-Blog/about/">About Me</a><a class="page-link" href="/Team-5-Blog/events/">Events</a><a class="page-link" href="/Team-5-Blog/planner/">Health Planner</a><a class="page-link" href="/Team-5-Blog/search/">Search</a><a class="page-link" href="/Team-5-Blog/categories/">Tags</a></div>
+        <div class="trigger"><a class="page-link" href="/Team-5-Blog/about/">About Me</a><a class="page-link" href="/Team-5-Blog/events/">Events</a><a class="page-link" href="/Team-5-Blog/home/">Home Page</a><a class="page-link" href="/Team-5-Blog/planner/">Health Planner</a><a class="page-link" href="/Team-5-Blog/search/">Search</a><a class="page-link" href="/Team-5-Blog/categories/">Tags</a></div>
       </nav></div>
 </header>
 <main class="page-content" aria-label="Content">
@@ -173,7 +173,7 @@ window.onload = wrap_img;
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The Pom.xml file is for dependencies- basically saying that this file is dependent on the parent and will inherit their properties. Spring will give you some things by default so to access it you will need to add this into your pom.xml to say that you would want to inherit this. <Depedencies> will contain what jars you would want maven to download and the <parent> will tell you what version of jars you want and <Properties> will change the version of java from your inherited one. Maven will download this automatically as the Bill of materials- the combination of jars that work well based on what versions you want. Maven is essentially the program for dependency management.&lt;/p&gt;
+<p>The Pom.xml file is for dependencies- basically saying that this file is dependent on the parent and will inherit their properties. Spring will give you some things by default so to access it you will need to add this into your pom.xml to say that you would want to inherit this. \<Dependencies> will contain what jars you would want maven to download and the \<parent> will tell you what version of jars you want and \<Properties> will change the version of java from your inherited one. Maven will download this automatically as the Bill of materials- the combination of jars that work well based on what versions you want. Maven is essentially the program for dependency management.&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
@@ -186,7 +186,7 @@ window.onload = wrap_img;
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Java will allow access to a TomCat server by default which would allow you to run your application on localhost in a closed loop. Once you run your application, you need to find a way to control what code to run to any http requests. This is what a controller does. A controller uses Spring mvc to make a restAPI to do this (basically it will convert this list to json). The annotation to declare that this is a controller is @Controller and the annotation to state what url you are mapping to would be for example @GetMapping("/birds"). The default for this would be a GET request so if you would like to use for example a POST request, you would need to mention it.</p>
+<p>Java will allow access to a TomCat server by default which would allow you to run your application on localhost in a closed loop. It will work as a webserver that will take in http requests on the port specified. Once you run your application, you need to find a way to control what code to run to any http requests. This is what a controller does. A controller uses Spring mvc to make a restAPI to do this (basically it will convert this list to json). The annotation to declare that this is a controller is \@Controller and the annotation to state what url you are mapping to would be for example \@GetMapping("/birds"). The default for this would be a GET request so if you would like to use for example a POST request, you would need to mention it.</p>
 
 </div>
 </div>
@@ -199,7 +199,7 @@ window.onload = wrap_img;
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>You can also make a Business service which will allow you to use the same instance every time vs spring making a new instance every time you get a request. This is because this is a singleton which will only have one instance of it made. The annotation to declare that you would make a dependency on this service would be @autowired which will tell spring to inject that sesrvice into that class and to make a service you would need the annotation @service.</p>
+<p>You can also make a Business service which will allow you to use the same instance every time vs spring making a new instance every time you get a request. This is because this is a singleton which will only have one instance of it made. The annotation to declare that you would make a dependency on this service would be \@autowired which will tell spring to inject that service into that class and to make a service you would need the annotation \@service.</p>
 
 </div>
 </div>
@@ -207,7 +207,7 @@ window.onload = wrap_img;
 &lt;/div&gt;
  
 
-</Properties></parent></Depedencies></p></div></div></div></div>
+</Properties></parent></Dependencies></p></div></div></div></div>
 
 
   </div><a class="u-url" href="/Team-5-Blog/2022/10/10/notes.html" hidden></a>
