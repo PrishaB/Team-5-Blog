@@ -140,7 +140,7 @@ window.onload = wrap_img;
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>A pojo stands for a Plain old Java Object meaning that it has to fit several criteria. These criteria are that it can't have any extends, implements, annotations, and so that way it can be run just by itself.</p>
+<p>A pojo stands for a Plain old Java Object meaning that it has to fit several criteria. These criteria are that it can't have any extends, implements, annotations, and so that way it can be run just by itself. You can turn a Pojo into an entity with the \@Entity annotation and then you must add an \@Id annotation as every entity needs a unique identifier</p>
 
 </div>
 </div>
@@ -186,7 +186,7 @@ window.onload = wrap_img;
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Java will allow access to a TomCat server by default which would allow you to run your application on localhost in a closed loop. It will work as a webserver that will take in http requests on the port specified. Once you run your application, you need to find a way to control what code to run to any http requests. This is what a controller does. A controller uses Spring mvc to make a restAPI to do this (basically it will convert this list to json). The annotation to declare that this is a controller is \@Controller and the annotation to state what url you are mapping to would be for example \@GetMapping("/birds"). The default for this would be a GET request so if you would like to use for example a POST request, you would need to mention it.</p>
+<p>Java will allow access to a TomCat server by default which would allow you to run your application on localhost in a closed loop. It will work as a webserver that will take in http requests on the port specified. Once you run your application, you need to find a way to control what code to run to any http requests. This is what a controller does. A controller uses Spring mvc to make a restAPI to do this (basically it will convert this list to json). The annotation to declare that this is a controller is \@Controller and the annotation to state what url you are mapping to would be for example \@GetMapping("/birds"). The default for this would be a GET request so if you would like to use for example a POST request, you would need to mention it. Such as in your \@RequestMapping(method=RequestMethod.POST, value ="/      "). It will map to this method when you gain this value request.</p>
 
 </div>
 </div>
@@ -200,6 +200,24 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>You can also make a Business service which will allow you to use the same instance every time vs spring making a new instance every time you get a request. This is because this is a singleton which will only have one instance of it made. The annotation to declare that you would make a dependency on this service would be \@autowired which will tell spring to inject that service into that class and to make a service you would need the annotation \@service.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="GET,-POST,-PUT,-DELETE">GET, POST, PUT, DELETE<a class="anchor-link" href="#GET,-POST,-PUT,-DELETE"> </a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Get gets the thing</li>
+<li>Post makes a new thing</li>
+<li>Put updates the thing</li>
+<li>Delete deletes the thing</li>
+</ul>
 
 </div>
 </div>
