@@ -12,7 +12,8 @@ permalink: /api/
     <th>url</th>
   </tr>
   </thead>
-  <tbody id="result">
+  <tbody 
+  id="result">
     <!-- javascript generated data -->
   </tbody>
 </table>
@@ -23,20 +24,15 @@ permalink: /api/
   const resultContainer = document.getElementById("result");
 
   // prepare fetch options
-  const url = "https://team555.tk/news/all";
- const options = {
-    method: 'GET', // *GET, POST, PUT, DELETE, etc.
-    mode: 'cors', // no-cors, *cors, same-origin
-    cache: 'default', // *default, no-cache, reload, force-cache, only-if-cached
-    credentials: 'omit', // include, *same-origin, omit
-    headers: {
-      'Content-Type': 'application/json'
-      // 'Content-Type': 'application/x-www-form-urlencoded',
-    },
-  };
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': '95798f48fcmsheb95af41fb5e7a3p1cc503jsn1c033886f550',
+		'X-RapidAPI-Host': 'mental-health-info-api.p.rapidapi.com'
+	}
+};
 
-  // fetch the API
-  fetch(url, options)
+fetch('https://mental-health-info-api.p.rapidapi.com/news/thetimes', options)
     // response is a RESTful "promise" on any successful fetch
     .then(response => {
       // check for response errors
