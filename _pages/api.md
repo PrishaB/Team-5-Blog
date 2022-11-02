@@ -1,3 +1,9 @@
+---
+layout: page
+title: API
+permalink: /api/
+---
+
 <!-- HTML table fragment for page -->
 <table>
   <thead>
