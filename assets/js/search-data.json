@@ -130,7 +130,7 @@
   
       ,"page2": {
           "title": "Mental Health News Articles",
-          "content": "Copy and Paste the URLs into a new tab to view the articles. . Key 1 Key 2 .",
+          "content": "Copy and Paste the URLs into a new tab to view the articles. . Title url .",
           "url": "https://prishab.github.io/Team-5-Blog/api/",
           "relUrl": "/api/",
           "date": ""
