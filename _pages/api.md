@@ -1,28 +1,35 @@
 ---
-layout: navbar
-title: Mental Health News Articles 
-permalink: /api/
+title: Kohls Shopping API
+layout: default
+permalink: /data/shopapi
+image: /images/teamlogo.png
+tags: [javascript]
 ---
+<body style="background-color: #F8F2F0" >
+</body>
 
-<h1>Copy and Paste the URLs into a new tab to view the articles.</h1>
 <!-- HTML table fragment for page -->
+
 <table>
   <thead>
   <tr>
-    <th>Title</th>
-    <th>url</th>
+    <th>Product</th>
+  
+    <th>Rating</th>
+    <th>Price</th>
   </tr>
   </thead>
-  <tbody 
-  id="result">
-    <!-- javascript generated data -->
+  <tbody id="result">
+    <!-- generated rows -->
   </tbody>
 </table>
 
 <!-- Script is layed out in a sequence (no function) and will execute when page is loaded -->
 <script>
   // prepare HTML result container for new output
-    // prepare fetch options
+  const resultContainer = document.getElementById("result");
+
+  // prepare fetch options
   const url = "https://vase.nighthawkcoders.tk/api/shopapi/daily";
 
   const options = {
@@ -36,7 +43,8 @@ permalink: /api/
     },
   };
 
-fetch(url, options)
+  // fetch the API
+  fetch(url, options)
     // response is a RESTful "promise" on any successful fetch
     .then(response => {
       // check for response errors
@@ -53,17 +61,32 @@ fetch(url, options)
       // valid response will have json data
       response.json().then(data => {
           console.log(data);
-          for (const row of data) {
-            // tr and td build out for each row
+
+          // Country data
+          for (const row of data.payload.products) {
+            // Hello please work
+            console.log(row);
+
+            // tr for each row
             const tr = document.createElement("tr");
-            const title = document.createElement("td");
-            const url = document.createElement("td");
+            // td for each column
+            const product = document.createElement("td");
+         
+            const rating = document.createElement("td");
+            const price = document.createElement("td");
+
             // data is specific to the API
-            title.innerHTML = row.title; 
-            url.innerHTML = row.url; 
+            product.innerHTML = row.productTitle;
+           
+            rating.innerHTML = row.rating.avgRating; 
+            price.innerHTML = row.valueAddedBadges.realTime; 
+
             // this build td's into tr
-            tr.appendChild(title);
-            tr.appendChild(url);
+            tr.appendChild(product);
+         
+            tr.appendChild(rating);
+            tr.appendChild(price);
+
             // add HTML to container
             resultContainer.appendChild(tr);
           }
