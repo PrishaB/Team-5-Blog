@@ -1,10 +1,17 @@
 <!DOCTYPE html>
-<html lang="en"><head>
+<html lang="en">---
+layout: navbar.html
+---
+
+
+<!-- 
+
+<head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Login | fastpages</title>
+<title>Login | Health.ly</title>
 <meta name="generator" content="Jekyll v4.1.1" />
 <meta property="og:title" content="Login" />
 <meta property="og:locale" content="en_US" />
@@ -12,14 +19,14 @@
 <meta property="og:description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
 <link rel="canonical" href="https://prishab.github.io/Team-5-Blog/login.html" />
 <meta property="og:url" content="https://prishab.github.io/Team-5-Blog/login.html" />
-<meta property="og:site_name" content="fastpages" />
+<meta property="og:site_name" content="Health.ly" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Login" />
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebPage","description":"An easy to use blogging platform with support for Jupyter Notebooks.","headline":"Login","url":"https://prishab.github.io/Team-5-Blog/login.html"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/Team-5-Blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://prishab.github.io/Team-5-Blog/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/Team-5-Blog/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="/Team-5-Blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://prishab.github.io/Team-5-Blog/feed.xml" title="Health.ly" /><link rel="shortcut icon" type="image/x-icon" href="/Team-5-Blog/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
 
 <script>
@@ -52,9 +59,10 @@ window.onload = wrap_img;
     });
 </script>
 </head>
+-->
 <body><header class="site-header">
 
-  <div class="wrapper"><a class="site-title" rel="author" href="/Team-5-Blog/">fastpages</a><nav class="site-nav">
+  <div class="wrapper"><a class="site-title" rel="author" href="/Team-5-Blog/">Health.ly</a><nav class="site-nav">
         <input type="checkbox" id="nav-trigger" class="nav-trigger" />
         <label for="nav-trigger">
           <span class="menu-icon">
@@ -73,122 +81,176 @@ window.onload = wrap_img;
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
-}
+body {font-family: Times, Helvetica, sans-serif;}
 
-.navbar {
-  overflow: hidden;
-  background-color: #333; 
-}
-
-.navbar a {
-  float: left;
-  font-size: 16px;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-.subnav {
-  float: left;
-  overflow: hidden;
-}
-
-.subnav .subnavbtn {
-  font-size: 16px;  
-  border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
-}
-
-.navbar a:hover, .subnav:hover .subnavbtn {
-  background-color: pink;
-}
-
-.subnav-content {
-  display: none;
-  position: absolute;
-  left: 0;
-  background-color: pink;
+/* Full-width input fields */
+input[type=text], input[type=password] {
   width: 100%;
-  z-index: 1;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
 }
 
-.subnav-content a {
-  float: left;
-  color: white;
-  text-decoration: none;
-}
-
-.subnav-content a:hover {
-  background-color: #eee;
+/* Set a style for all buttons */
+button {									
+  background-color: #ee76d6;
   color: black;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
 }
 
-.subnav:hover .subnav-content {
-  display: block;
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
 }
 </style>
 </head>
 <body>
 
-<div class="navbar">
-  <a href="home.html">Health.ly</a>
-  <a></a>
-  <a></a>
-  <a></a>
-  <a></a>
-  <a></a>
-  <a></a>
-  <a></a>
-  <a></a>
-  <a></a>
-  <a></a>
-  <a></a>
-  <a></a>
+<h1>Login or Sign Up</h1>
 
+<h3>Keep track of your comments and replies personalised to you!</h3>
+
+<button onclick="document.getElementById('id01').style.display='block'" style= "center"; "width:500px;">Login</button>
+
+<div id="id01" class="modal">
   
-  
-  <div class="subnav">
-    <button class="subnavbtn">About <i class="fa fa-caret-down"></i></button>
-    <div class="subnav-content">
-      <a href="#">Sponsor</a>
-      <a href="#">Team</a>
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal"></span>
+      <img src="images/Login.jpeg" alt="Login" class="avatar">
     </div>
-  </div> 
-  <div class="subnav">
-    <button class="subnavbtn">Services <i class="fa fa-caret-down"></i></button>
-    <div class="subnav-content">
-      <a href="#">Chatroom</a>
-      <a href="#">Discussions</a>
-      <a href="/api/">Latest News</a>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
     </div>
-  </div> 
-  <div class="subnav">
-    <button class="subnavbtn">Resources <i class="fa fa-caret-down"></i></button>
-    <div class="subnav-content">
-      <a href="stress.html">Stress Reducing Activities</a>
-      <a href="#">Therapists</a>
-      <a href="#">Contacts</a>
-      <a href="#">Del Norte Actions</a>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
     </div>
-  </div>
-  <a href="login.html">Login/Sign Up</a>
+  </form>
 </div>
 
-<div style="padding:0 16px">
-  <!-- <h3>Subnav/dropdown menu inside a Navigation Bar</h3> -->
-  <!--<p>Hover over the "about", "services" or "partners" link to see the sub navigation menu.</p> -->
-</div>
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
 
 </body>
 </html>
