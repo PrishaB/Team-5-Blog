@@ -1,8 +1,15 @@
----
-layout: default
-title: Mental Health News Articles 
-permalink: /api/
----
+<!--Navigation bar-->
+<div id="nav-placeholder">
+
+</div>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+<script>
+$(function(){
+  $("#nav-placeholder").load("/_layouts/navbar.html");
+});
+</script>
+<!--end of Navigation bar-->
 
 <h1>Copy and Paste the URLs into a new tab to view the articles.</h1>
 <!-- HTML table fragment for page -->

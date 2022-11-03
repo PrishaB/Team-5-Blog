@@ -1,9 +1,15 @@
----
-layout: default
-permalink: /search/
-title: Search
-search_exclude: true
----
+<!--Navigation bar-->
+<div id="nav-placeholder">
+
+</div>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+<script>
+$(function(){
+  $("#nav-placeholder").load("/_layouts/navbar.html");
+});
+</script>
+<!--end of Navigation bar-->
 
 <!-- adapted from https://github.com/pmarsceill/just-the-docs -->
 <script type="text/javascript" src="{{ '/assets/js/search.js' | relative_url }}"></script>
