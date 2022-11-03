@@ -2,81 +2,74 @@
 layout: default
 ---
 
-<div class="home">
-  {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
 
-  {{ content | markdownify }}
+<head>
+    <title>Welcome to Health.ly</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+        .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+        .fa-anchor,.fa-coffee {font-size:200px}
+    </style>
+</head>
+<body>
 
+<!-- Header -->
+<header class="w3-container w3-pale-blue w3-center" style="padding:128px 16px; color: rgb(230, 176, 221)">
+    <h1 class="w3-margin w3-jumbo">Health Concerns</h1>
+    <p class="w3-xlarge">Your intro to Health.ly</p>
+    <form action="https://docs.google.com/forms/d/e/1FAIpQLScTY6KvVLO_tjxsVtJST8bwj9RsnwnvgREjR-EqyBlIsWs5JA/viewform">
+        <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Start with Health.ly Today!</button>
+    </form>
+</header>
 
-  {% if site.paginate %}
-    {% assign rawposts = paginator.posts %}
-  {% else %}
-    {% assign rawposts = site.posts %}
-  {% endif %}
+<!-- First Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+    <div class="w3-content">
+        <div class="w3-twothird">
+            <h1>Who are we?</h1>
+            <h5 class="w3-padding-32">Health.ly is an entirely student run club in Del Norte High School
+                that was founded in 2022. We are made up of students who share a common interest in coding
+                and understanding the language behind computers to help the public with the health concerns we have at this high education school program. </h5>
 
-  <!-- Hide posts if front matter flag hide:true -->
-  {% assign posts = ''|split:'' %}
-  {% for post in rawposts %}
-    {% if post.hide != true %}
-      {% assign posts = posts|push:post%}
-    {% endif %}
-  {% endfor %}
+            <p class="w3-text-grey">If you want to join or get more post notifications on clubs on campus we support,
+                all you need to do is submit an application via the button above and wait for a response back.
+                </p>
+        </div>
 
-  <!-- Sort posts by rank, then date -->
-  {% assign grouped_posts = posts | group_by: "sticky_rank" | sort: "name", "last" %}
-  {% assign sticky_posts = ''|split:'' %}
-  {% assign non_sticky_posts = '' | split:'' %}
-
- 
-  {% for gp in grouped_posts %}
-    {%- if gp.name == "" -%}
-      {% assign non_sticky_posts = gp.items | sort: "date" | reverse %}
-    {%- else %}
-      {% assign sticky_posts = sticky_posts | concat: gp.items %}
-    {%- endif -%}
-  {% endfor %}
-
-   <!-- Assemble final sorted posts array -->
-  {% assign sticky_posts = sticky_posts | sort: "sticky_rank", "last" %}
-  {% assign posts = sticky_posts | concat: non_sticky_posts %}
-
-  {%- if posts.size > 0 -%}
-    {%- if page.list_title -%}
-      <h2 class="post-list-heading">{{ page.list_title }}</h2>
-    {%- endif -%}
-    <ul class="post-list">
-      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-      {%- for post in posts -%}
-      <li>
-        {%- if site.show_image -%}
-            {%- include post_list_image_card.html -%}
-        {% else %}
-            {%- include post_list.html -%}
-        {%- endif -%}
-      </li>
-      {%- endfor -%}
-    </ul>
-
-    {% if site.paginate and site.posts.size > site.paginate %}
-      <div class="pager">
-        <ul class="pagination">
-        {%- if paginator.previous_page %}
-          <li><a href="{{ paginator.previous_page_path | relative_url }}" class="previous-page">{{ paginator.previous_page }}</a></li>
-        {%- else %}
-          <li><div class="pager-edge">•</div></li>
-        {%- endif %}
-          <li><div class="current-page">{{ paginator.page }}</div></li>
-        {%- if paginator.next_page %}
-          <li><a href="{{ paginator.next_page_path | relative_url }}" class="next-page">{{ paginator.next_page }}</a></li>
-        {%- else %}
-          <li><div class="pager-edge">•</div></li>
-        {%- endif %}
-        </ul>
-      </div>
-    {%- endif %}
-
-  {%- endif -%}
-
+        <div class="w3-third w3-center">
+            <i class="fa fa-code-fork w3-padding-64 w3-text-powderblue" style="font-size: 200px; color: rgb(230, 176, 221)"></i>
+        </div>
+    </div>
 </div>
+
+<!-- Second Grid -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+    <div class="w3-content">
+        <div class="w3-third w3-center">
+            <i class="fa fa-coffee w3-padding-64 w3-margin-right" style="color: rgb(230, 176, 213)"></i>
+        </div>
+
+        <div class="w3-twothird">
+            <h1>Why should you join?</h1>
+            <h5 class="w3-padding-32">Health.ly is a friendly environment where learning about one another and getting the right help you need can take place.
+                All grades are welcome from Freshman to Seniors while getting the right tools on and off campus. The only requirement is that you are kind to 
+                the other members and are ready to learn how to code. Your life matters and we are here to HELP! :)</h5>
+
+            <p class="w3-text-grey">Heath.ly prides itself on a pressure free environment where students can gain knowledge they need
+                for a future full of success. Mental health is an issue where the entire globe has as we hope to maintain a community of freinds, family, and faculty members. </p>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-32 w3-center w3-opacity">
+</footer>
+
+</body>
+</html>
