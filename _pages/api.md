@@ -1,5 +1,5 @@
 ---
-layout: navbar
+layout: default
 title: Mental Health News Articles 
 permalink: /api/
 ---
