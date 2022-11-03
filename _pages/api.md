@@ -4,6 +4,7 @@ title: Mental Health News Articles
 permalink: /api/
 ---
 
+<h1>Copy and Paste the URLs into a new tab to view the articles.</h1>
 <!-- HTML table fragment for page -->
 <table>
   <thead>
