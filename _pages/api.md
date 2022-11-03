@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: navbar
 title: Mental Health News Articles 
 permalink: /api/
 ---
@@ -22,18 +22,21 @@ permalink: /api/
 <!-- Script is layed out in a sequence (no function) and will execute when page is loaded -->
 <script>
   // prepare HTML result container for new output
-  const resultContainer = document.getElementById("result");
+    // prepare fetch options
+  const url = "https://vase.nighthawkcoders.tk/api/shopapi/daily";
 
-  // prepare fetch options
-const options = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': '95798f48fcmsheb95af41fb5e7a3p1cc503jsn1c033886f550',
-		'X-RapidAPI-Host': 'mental-health-info-api.p.rapidapi.com'
-	}
-};
+  const options = {
+    method: 'GET', // *GET, POST, PUT, DELETE, etc.
+    mode: 'cors', // no-cors, *cors, same-origin
+    cache: 'default', // *default, no-cache, reload, force-cache, only-if-cached
+    credentials: 'omit', // include, *same-origin, omit
+    headers: {
+      'Content-Type': 'application/json'
+      // 'Content-Type': 'application/x-www-form-urlencoded',
+    },
+  };
 
-fetch('https://mental-health-info-api.p.rapidapi.com/news/thetimes', options)
+fetch(url, options)
     // response is a RESTful "promise" on any successful fetch
     .then(response => {
       // check for response errors
