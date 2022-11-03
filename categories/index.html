@@ -69,57 +69,122 @@ window.onload = wrap_img;
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <div class="home">
+        <!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
 
+.navbar {
+  overflow: hidden;
+  background-color: #333; 
+}
 
-<h2>Contents</h2>
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
 
+.subnav {
+  float: left;
+  overflow: hidden;
+}
+
+.subnav .subnavbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .subnav:hover .subnavbtn {
+  background-color: pink;
+}
+
+.subnav-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: pink;
+  width: 100%;
+  z-index: 1;
+}
+
+.subnav-content a {
+  float: left;
+  color: white;
+  text-decoration: none;
+}
+
+.subnav-content a:hover {
+  background-color: #eee;
+  color: black;
+}
+
+.subnav:hover .subnav-content {
+  display: block;
+}
+</style>
+</head>
+<body>
+
+<div class="navbar">
+  <a href="#home.html">Health.ly</a>
+  <a></a>
+  <a></a>
+  <a></a>
+  <a></a>
+  <a></a>
   
   
-  
-
-  <ul>
-  
-    <li><a href="#jupyter">jupyter</a></li>
-  
-    <li><a href="#markdown">markdown</a></li>
-  
-  </ul>
-
-  
-      <h3 id ="jupyter"><i class="fas fa-tags category-tags-icon"></i></i> jupyter</h3>
-      <a name="jupyter"></a>
-      
-        <article class="archive-item">
-          <p class="post-meta post-meta-title"><a class="page-meta" href="/Team-5-Blog/jupyter/2022/09/24/fibo.html">Week of 9/20</a>  • Sep 24, 2022</p>
-        </article>
-        
-      
-        <article class="archive-item">
-          <p class="post-meta post-meta-title"><a class="page-meta" href="/Team-5-Blog/jupyter/2022/09/20/lesson.html">Sept 20 Lesson Plan</a>  • Sep 20, 2022</p>
-        </article>
-        
-      
-        <article class="archive-item">
-          <p class="post-meta post-meta-title"><a class="page-meta" href="/Team-5-Blog/jupyter/2020/02/20/test.html">Fastpages Notebook Blog Post</a>  • Feb 20, 2020</p>
-        </article>
-        
-      
-  
-      <h3 id ="markdown"><i class="fas fa-tags category-tags-icon"></i></i> markdown</h3>
-      <a name="markdown"></a>
-      
-        <article class="archive-item">
-          <p class="post-meta post-meta-title"><a class="page-meta" href="/Team-5-Blog/markdown/2020/01/14/test-markdown-post.html">An Example Markdown Post</a>  • Jan 14, 2020</p>
-        </article>
-        
-      
-  
-
-
-
-
+  <div class="subnav">
+    <button class="subnavbtn">About <i class="fa fa-caret-down"></i></button>
+    <div class="subnav-content">
+      <a href="#">Sponsor</a>
+      <a href="#">Team</a>
+    </div>
+  </div> 
+  <div class="subnav">
+    <button class="subnavbtn">Services <i class="fa fa-caret-down"></i></button>
+    <div class="subnav-content">
+      <a href="#">Chatroom</a>
+      <a href="#">Discussions</a>
+      <a href="/api/">Latest News</a>
+    </div>
+  </div> 
+  <div class="subnav">
+    <button class="subnavbtn">Resources <i class="fa fa-caret-down"></i></button>
+    <div class="subnav-content">
+      <a href="stress.html">Stress Reducing Activities</a>
+      <a href="#">Therapists</a>
+      <a href="#">Contacts</a>
+      <a href="#">Del Norte Actions</a>
+    </div>
+  </div>
+  <a href="login.html">Login/Sign Up</a>
 </div>
+
+<div style="padding:0 16px">
+  <!-- <h3>Subnav/dropdown menu inside a Navigation Bar</h3> -->
+  <!--<p>Hover over the "about", "services" or "partners" link to see the sub navigation menu.</p> -->
+</div>
+
+</body>
+</html>
+
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/Team-5-Blog/"></data>
