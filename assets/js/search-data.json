@@ -139,7 +139,14 @@
   
 
   
-
+      ,"page3": {
+          "title": "Blog",
+          "content": "&lt;!DOCTYPE HTML&gt; . Blog . Spring Boot Blog Application . . Title . Account Name . Created At . body text . . &lt;/body&gt; &lt;/html&gt; .",
+          "url": "https://prishab.github.io/Team-5-Blog/blog/",
+          "relUrl": "/blog/",
+          "date": ""
+      }
+      
   
 
   
@@ -147,7 +154,6 @@
   
 
   
-  
 
   
 
@@ -157,6 +163,11 @@
   
 
   
+  
+
+  
+
+  
 
   
   
@@ -168,7 +179,7 @@
   
 
   
-      ,"page15": {
+      ,"page16": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://prishab.github.io/Team-5-Blog/robots.txt",
