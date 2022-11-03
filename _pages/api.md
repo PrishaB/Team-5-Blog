@@ -9,8 +9,8 @@ permalink: /api/
 <table>
   <thead>
   <tr>
-    <th>Key 1</th>
-    <th>Key 2</th>
+    <th>Title</th>
+    <th>url</th>
   </tr>
   </thead>
   <tbody 
@@ -22,21 +22,18 @@ permalink: /api/
 <!-- Script is layed out in a sequence (no function) and will execute when page is loaded -->
 <script>
   // prepare HTML result container for new output
-    // prepare fetch options
-  const url = "https://localhost:8015/news/all";
+  const resultContainer = document.getElementById("result");
 
-  const options = {
-    method: 'GET', // *GET, POST, PUT, DELETE, etc.
-    mode: 'cors', // no-cors, *cors, same-origin
-    cache: 'default', // *default, no-cache, reload, force-cache, only-if-cached
-    credentials: 'omit', // include, *same-origin, omit
-    headers: {
-      'Content-Type': 'application/json'
-      // 'Content-Type': 'application/x-www-form-urlencoded',
-    },
-  };
+  // prepare fetch options
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': '95798f48fcmsheb95af41fb5e7a3p1cc503jsn1c033886f550',
+		'X-RapidAPI-Host': 'mental-health-info-api.p.rapidapi.com'
+	}
+};
 
-fetch(url, options)
+fetch('https://mental-health-info-api.p.rapidapi.com/news/thetimes', options)
     // response is a RESTful "promise" on any successful fetch
     .then(response => {
       // check for response errors
@@ -59,11 +56,11 @@ fetch(url, options)
             const title = document.createElement("td");
             const url = document.createElement("td");
             // data is specific to the API
-            title.innerHTML = row.key1; 
-            url.innerHTML = row.key2; 
+            title.innerHTML = row.title; 
+            url.innerHTML = row.url; 
             // this build td's into tr
-            tr.appendChild(key1);
-            tr.appendChild(key2);
+            tr.appendChild(title);
+            tr.appendChild(url);
             // add HTML to container
             resultContainer.appendChild(tr);
           }
