@@ -1,0 +1,368 @@
+<!--Navigation bar-->
+<div id="nav-placeholder">
+
+</div>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+<script>
+$(function(){
+  $("#nav-placeholder").load("/_layouts/navbar.html");
+});
+</script>
+<!--end of Navigation bar-->
+
+    <body onload="CurrQuestion(0)">
+    <main>
+
+        <head>
+            <style>{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            html, body{
+                height: 150%;
+            }
+
+
+            body{
+                font-family: 'Montserrat', serif;
+                background-color: #e78f0c;
+            }
+
+
+            .game-details-container h1{
+                font-size: 1.2rem;
+            }
+
+            .game-question-container{
+                width: 100%;
+                height: 8rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 5px solid black;
+                border-radius: 25px;
+            }
+
+            .game-question-container h1{
+                font-size: 1.1rem;
+                text-align: center;
+                padding: 5px;
+                border: 5px white;
+
+            }
+
+            .game-options-container{
+                width: 100%;
+                height: 12rem;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: space-around;
+            }
+
+            .game-options-container span{
+                width: 50%;
+                height: 3rem;
+                border: 5px solid black;
+                border-radius: 20px;
+                overflow: hidden;
+                background-color: #25883c;
+            }
+            span label{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                transition: transform 0.3s;
+                font-weight: 600;
+                color: black;
+            }
+
+            span label:hover{
+                -ms-transform: scale(1.12);
+                -webkit-transform: scale(1.12);
+                transform: scale(1.12);
+                color: red;
+            }
+
+            input[type="radio"] {
+                position: relative;
+                display: none;
+            }
+
+
+            .next-button-container{
+                width: 50%;
+                height: 3rem;
+                display: flex;
+                justify-content: center;
+            }
+            .next-button-container button{
+                width: 8rem;
+                height: 2rem;
+                border-radius: 10px;
+                background: none;
+                color: rgb(25, 25, 25);
+                font-weight: 600;
+                border: 3px solid gray;
+                cursor: pointer;
+                outline: none;
+                background-color: rgb(238, 236, 241);
+            }
+            .next-button-container button:hover{
+                background-color: rgb(66, 66, 66);
+            }
+
+            .modal-container{
+                display: none;
+                position: fixed;
+                z-index: 1;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                overflow: auto;
+                background-color: rgb(0,0,0);
+                background-color: rgba(0,0,0,0.4);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                -webkit-animation: fadeIn 1.2s ease-in-out;
+                animation: fadeIn 1.2s ease-in-out;
+            }
+
+            .modal-content-container{
+                height: 20rem;
+                width: 25rem;
+                background-color: rgb(43, 42, 42);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+                border-radius: 25px;
+            }
+
+            .modal-content-container h1{
+                font-size: 1.3rem;
+                height: 3rem;
+                color: lightgray;
+                text-align: center;
+            }
+
+            .grade-details{
+                width: 15rem;
+                height: 10rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+            }
+
+            .grade-details p{
+                color: white;
+                text-align: center;
+            }
+
+            .modal-button-container{
+                height: 2rem;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+
+            .modal-button-container button:hover{
+                background-color: rgb(83, 82, 82);
+            }
+
+            </style>
+        </head>
+        <title>
+            PARK-Tech - Wishlist
+        </title>
+        <div class="modal-container" id="modal-score">
+
+            <div class="modal-content-container">
+
+            </div>
+        </div>
+
+        <div class="game-quiz-container">
+
+            <div class="game-details-container">
+                <div class="center">
+                    <h1 class= "align-content-center" style="width: 100%; font-size: x-large">WELCOME TO Health.ly's Intro</h1>
+                    <h1 class= "align-content-center" style="width: 70%; font-size: x-large">Let us get to know you with answering a couple of questions!</h1>
+
+                    <h1 style="width: 30%; color: rgb(128, 0, 79); font-size: x-large" id="type"></h1>
+                </div>
+            </div>
+
+            <div id = "quiz" style = "display:none">
+        
+
+
+                <div class="game-options-container">
+
+
+                    <div class="modal-container" id="option-modal">
+
+                        <div class="modal-content-container">
+
+                            <div class="modal-button-container">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <span>
+                        <input type="radio" id="option-one" name="option" class="radio" value="A" />
+                        <label for="option-one" class="option" id="option-uno"></label>
+                    </span>
+
+
+                    <span>
+                        <input type="radio" id="option-two" name="option" class="radio" value="B" />
+                        <label for="option-two" class="option" id="option-dos"></label>
+                    </span>
+
+                </div>
+
+                <div class="next-button-container">
+                    <button onclick="NextQ()" id="book"></button>
+                </div>
+
+            </div>
+            <div id="neww" style="display: none">
+                <button onClick="window.location.reload();">Create Again</button>
+            </div>
+        </div>
+        <script>
+            const questions = [
+                {
+                    question: " Grade Level",
+                    A: "Upper Class(Seniors and Juniors)",
+                    B: "Lower Class(Freshmans and Sophomores )",
+                    Answer: "A"
+                },
+                {
+                    question: " Stress Level",
+                    A: "Often",
+                    B: "Not that Often",
+                    Answer: "A"
+                },
+                {
+                    question: " Fablehaven",
+                    A: "Yes",
+                    B: "No",
+                    Answer: "A"
+                },
+                {
+                    question: " Stress on a scale of 1-10, 1 being never stressed and 10 being super stressed.",
+                    A: "1-5",
+                    B: "6-10",
+                    Answer: "A"
+                },
+          
+            ]
+            
+            function mixQuestions(clist) {
+                while (shuffledQ.length <= 4) {
+                    const random = clist[Math.floor(Math.random() * clist.length)]
+                    if (!shuffledQ.includes(random)) {
+                        shuffledQ.push(random)
+                    }
+                }
+            }
+
+            let button1 = document.getElementById("buttonf"); //
+    
+
+            function chosenf() {
+                document.getElementById("type").innerHTML = "Question" //
+                document.getElementById('quiz').style.display = '';
+                button2.disabled = true;
+                button3.disabled = true;
+                CurrQuestion(0, questions)
+            }
+
+            let questionNumber = 1
+            var myylist = []
+            let indexNumber = 0
+            let shuffledQ = []
+
+            function CurrQuestion(index, clist) { //
+                while (shuffledQ.length <= 4) {
+                    const random = clist[Math.floor(Math.random() * clist.length)]
+                    if (!shuffledQ.includes(random)) {
+                        shuffledQ.push(random)
+                    }
+                }
+                const currentQuestion = shuffledQ[index]
+
+                if (index <  4) {
+                    document.getElementById("book").innerHTML = "Next Question";
+
+                }
+                else {
+                    document.getElementById("book").innerHTML = "Submit";
+
+                }
+                document.getElementById("QNum").innerHTML = questionNumber //
+                document.getElementById("display-question").innerHTML = currentQuestion.question; //
+                document.getElementById("option-uno").innerHTML = currentQuestion.A; //
+                document.getElementById("option-dos").innerHTML = currentQuestion.B; //
+            }
+
+            function checkForAnswer() { //
+                const currentQuestion = shuffledQ[indexNumber] //
+                const currentQuestionAnswer = currentQuestion.Answer //
+
+                const options = document.getElementsByName("option"); // Takes option that is chosen
+
+                options.forEach((option) => {
+                    if (option.checked === true && option.value === currentQuestionAnswer) { //chose "yes"
+                        myylist.push(currentQuestion.question) //Adds the current book displayed to list
+                        indexNumber++ //goes to next book in the chosen list
+                        if (questionNumber < 5) {
+                            questionNumber++ //just display book list
+                        }
+                    }
+                    else if (option.checked && option.value !== currentQuestionAnswer) { //Chose "no"
+                        indexNumber++ //goes to next book in the chosen list
+                        if (questionNumber < 5) {
+                            questionNumber++
+                        }
+                    }
+                })
+            }
+
+            //called when the next button is called
+            function NextQ() {
+                checkForAnswer() //check if player picked right or wrong option
+                //delays next question displaying for a second just for some effects so questions don't rush in on the user
+                if (indexNumber === 5) {
+                    document.getElementById("output").innerHTML = "Thanks!    You seemed to be stressed. We will make you feel better! :)" 
+                    document.getElementById('quiz').style.display = 'none';
+                    document.getElementById('neww').style.display = '';
+
+                }
+                setTimeout(() => { //
+                    if (indexNumber <= 5) {
+                        CurrQuestion(indexNumber)
+                    }
+                    else {
+                    }
+                }, 0);
+            }
+        </script>
+    </main>
+    </body>
+{% endblock %}
