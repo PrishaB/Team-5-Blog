@@ -29,7 +29,7 @@ $(function(){
 <!-- Script is layed out in a sequence (no function) and will execute when page is loaded -->
 <script>
   // prepare HTML result container for new output
-  const resultContainer = document.getElementById("result");
+   const resultContainer = document.getElementById("result");
 
   // prepare fetch options
 const options = {
