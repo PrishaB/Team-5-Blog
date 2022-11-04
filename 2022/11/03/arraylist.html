@@ -27,38 +27,147 @@ layout: navbar
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-11-03T00:00:00-05:00","datePublished":"2022-11-03T00:00:00-05:00","description":"An easy to use blogging platform with support for Jupyter Notebooks.","headline":"Array List","mainEntityOfPage":{"@type":"WebPage","@id":"https://prishab.github.io/Team-5-Blog/2022/11/03/arraylist.html"},"url":"https://prishab.github.io/Team-5-Blog/2022/11/03/arraylist.html"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/Team-5-Blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://prishab.github.io/Team-5-Blog/feed.xml" title="Health.ly" /><link rel="shortcut icon" type="image/x-icon" href="/Team-5-Blog/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+<link rel="stylesheet" href="/Team-5-Blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://prishab.github.io/Team-5-Blog/feed.xml" title="Health.ly" />
 
-<script>
-function wrap_img(fn) {
-    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
-        var elements = document.querySelectorAll(".post img");
-        Array.prototype.forEach.call(elements, function(el, i) {
-            if (el.getAttribute("title") && (el.className != "emoji")) {
-                const caption = document.createElement('figcaption');
-                var node = document.createTextNode(el.getAttribute("title"));
-                caption.appendChild(node);
-                const wrapper = document.createElement('figure');
-                wrapper.className = 'image';
-                el.parentNode.insertBefore(wrapper, el);
-                el.parentNode.removeChild(el);
-                wrapper.appendChild(el);
-                wrapper.appendChild(caption);
-            }
-        });
-    } else { document.addEventListener('DOMContentLoaded', fn); }
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
 }
-window.onload = wrap_img;
-</script>
 
-<script>
-    document.addEventListener("DOMContentLoaded", function(){
-    // add link icon to anchor tags
-    var elem = document.querySelectorAll(".anchor-link")
-    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
-    });
-</script>
+.navbar {
+  overflow: hidden;
+  background-color: #333; 
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.subnav {
+  float: left;
+  overflow: hidden;
+}
+
+.subnav .subnavbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .subnav:hover .subnavbtn {
+  background-color: pink;
+}
+
+.subnav-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: pink;
+  width: 100%;
+  z-index: 1;
+}
+
+.subnav-content a {
+  float: left;
+  color: white;
+  text-decoration: none;
+}
+
+.subnav-content a:hover {
+  background-color: #eee;
+  color: black;
+}
+
+.subnav:hover .subnav-content {
+  display: block;
+}
+</style>
+</head>
+<body>
+
+<div class="navbar">
+  <a href="/_pages/homes.html">Health.ly</a>
+  <a></a>
+  <a></a>
+  <a></a>
+  <a></a>
+  <a></a>
+  <a></a>
+  <a></a>
+  <a></a>
+  <a></a>
+  <a></a>
+  <a></a>
+  <a></a>
+  <a></a>
+  <a></a>
+  <a></a>
+  <a></a>
+  <a></a>
+  <a></a>
+  <a></a>
+  <a></a>
+  <a></a>
+  <a></a>
+  <a></a>
+  <a></a>
+
+
+  
+  
+  <div class="subnav">
+    <button class="subnavbtn">About <i class="fa fa-caret-down"></i></button>
+    <div class="subnav-content">
+      <a href="/_pages/sponser.html">Sponsor</a>
+      <a href="/_pages/homes.html">Team</a>
+    </div>
+  </div> 
+  <div class="subnav">
+    <button class="subnavbtn">Services <i class="fa fa-caret-down"></i></button>
+    <div class="subnav-content">
+      <a href="/_pages/interactive.html">Getting to Know You</a>
+      <a href="/_pages/events.html">Events</a>
+      <a href="#">Chatroom</a>
+      <a href="/_pages/blog.html">Blog</a>
+
+      <a href="/_pages/api.html">Latest News</a>
+    </div>
+  </div> 
+  <div class="subnav">
+    <button class="subnavbtn">Resources <i class="fa fa-caret-down"></i></button>
+    <div class="subnav-content">
+      <a href="/_pages/stress.html">Stress Reducing Activities</a>
+      <a href="/_pages/helpline.html">HelpLines</a>
+      <a href="/_pages/contact.html">Contacts</a>
+      <a href="/_pages/action.html">Del Norte Actions</a>
+    </div>
+  </div>
+  <a href="/_pages/logins.html">Login/Sign Up</a>
+</div>
+
+<div style="padding:0 16px">
+  <!-- <h3>Subnav/dropdown menu inside a Navigation Bar</h3> -->
+  <!--<p>Hover over the "about", "services" or "partners" link to see the sub navigation menu.</p> -->
+</div>
+
+</body>
+</html>
 </head>
 -->
 <body>
